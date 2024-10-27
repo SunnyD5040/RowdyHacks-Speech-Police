@@ -53,16 +53,16 @@ if (!SpeechRecognition) {
     transcriptionDisplay.textContent = transcript; // Display transcription
     // Check for vocal imperfections
     let vocalImperfections = countWordsInString(transcript, viList);
-    let likes = countWordsInString(transcript, viList[1]);
-    let youKnows = countWordsInString(transcript, viList[0]);
-    let sos = countWordsInString(transcript, viList[2]);
-    let rights = countWordsInString(transcript, viList[5]);
-    let wells = countWordsInString(transcript, viList[7]);
-    let iMeans = countWordsInString(transcript, viList[6]);
-    let anyways = countWordsInString(transcript, viList[8]);
-    let actuallys = countWordsInString(transcript, viList[3]);
-    let basicallys = countWordsInString(transcript, viList[4]);
-    let literallys = countWordsInString(transcript, viList[9]);
+    let likes = countWordsInString(transcript, [viList[1]]);
+    let youKnows = countWordsInString(transcript, [viList[0]]);
+    let sos = countWordsInString(transcript, [viList[2]]);
+    let rights = countWordsInString(transcript, [viList[5]]);
+    let wells = countWordsInString(transcript, [viList[7]]);
+    let iMeans = countWordsInString(transcript, [viList[6]]);
+    let anyways = countWordsInString(transcript, [viList[8]]);
+    let actuallys = countWordsInString(transcript, [viList[3]]);
+    let basicallys = countWordsInString(transcript, [viList[4]]);
+    let literallys = countWordsInString(transcript, [viList[9]]);
     console.log(transcript);
     console.log(`Vocal Imperfections: ${vocalImperfections}`);
     counterDisplay.textContent = "Total Vocal Imperfections: " + vocalImperfections;
@@ -93,8 +93,8 @@ if (!SpeechRecognition) {
       recordButton.textContent = 'Stop Transcription';
     } else {
       recognition.stop();
-      //isRecording = false;
-      recordButton.textContent = 'Start Transcription';
+      isRecording = false;
+      recordButton.textContent = 'Restart Transcription';
     }
   });
 }
