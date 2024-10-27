@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech to Text Transcription</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+  <div class="voice">
+    <h1>Filler Word Counter</h1>
+    <textarea id="transcription">Transcription will appear here...</textarea>
+    <button id="recordButton">Start Transcription</button>
+  </div>
+  <div class="stats">
+    <div class="count" id="counter">Total Vocal Imperfections: 0</div>
+    <div class="count" id="likecounter">"Like" Counter: 0</div>
+    <div class="count" id="youknowcounter">"You Know" Counter: 0</div>
+    <div class="count" id="socounter">"So" Counter: 0</div>
+    <div class="count" id="rightcounter">"Right" Counter: 0</div>
+    <div class="count" id="wellcounter">"Well" Counter: 0</div>
+    <div class="count" id="imeancounter">"I mean" Counter: 0</div>
+    <div class="count" id="anywaycounter">"Anyway" Counter: 0</div>
+    <div class="count" id="actuallycounter">"Actually" Counter: 0</div>
+    <div class="count" id="basicallycounter">"Basically" Counter: 0</div>
+    <div class="count" id="literallycounter">"Literally" Counter: 0</div>
+  </div>
+  <script src="transcribe.js"></script>
+</body>
+</html>
